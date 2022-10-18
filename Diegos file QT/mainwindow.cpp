@@ -6,15 +6,10 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    ui->pushButton->setText("MayaHello");
-
-    connect(ui->dateEdit, SIGNAL(dateChanged(QDate)),
-            ui->calendarWidget, SLOT(setSelectedDate(QDate)));
 }
 
 MainWindow::~MainWindow()
 {
     delete ui;
 }
-
 
