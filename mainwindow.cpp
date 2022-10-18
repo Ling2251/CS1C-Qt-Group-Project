@@ -7,6 +7,9 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
     ui->pushButton->setText("MayaHello");
+
+    connect(ui->dateEdit, SIGNAL(dateChanged(QDate)),
+            ui->calendarWidget, SLOT(setSelectedDate(QDate)));
 }
 
 MainWindow::~MainWindow()
